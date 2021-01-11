@@ -1,4 +1,4 @@
-# CLI-Scortex
+# CLI
 
 ## Abstract
 
@@ -48,30 +48,30 @@ line of text.  The data is represented as a space-separated list of numbers.
 
 ### Data examples
 
-The following data in JSON format:
-  [[1,23,345],[567,678,789]]
-is written like this in line format:
-  2 1 23 345 567 678 789
-and like this in table format:
-    1  23 345
+The following data in JSON format:<br/>
+  [[1,23,345],[567,678,789]]<br/>
+is written like this in line format:<br/>
+  2 1 23 345 567 678 789<br/>
+and like this in table format:<br/>
+    1  23 345<br/>
   567 678 789
 
-The following data in JSON format:
-  [[1,2],[3,4],[5,678]]
-is written like this in line format:
-  3 1 2 3 4 5 678
-and like this in table format:
-  1   2
-  3   4
+The following data in JSON format:<br/>
+  [[1,2],[3,4],[5,678]]<br/>
+is written like this in line format:<br/>
+  3 1 2 3 4 5 678<br/>
+and like this in table format:<br/>
+  1   2<br/>
+  3   4<br/>
   5 678
 
 The following file in line format is invalid and should trigger an error, as
-it's impossible to arrange 4 items in 3 rows of the same length:
-  3 123 234 345 678
+it's impossible to arrange 4 items in 3 rows of the same length:<br/>
+  3 123 234 345 678<br/>
 
-The following file in table format is invalid and should trigger an error, as not all rows are the same length:
-  1 2 3
-  4 5 6
+The following file in table format is invalid and should trigger an error, as not all rows are the same length:<br/>
+  1 2 3<br/>
+  4 5 6<br/>
   7 8
 
 ## Operations
@@ -88,19 +88,19 @@ This operation is only supported if all data sources have the same number of col
 
 This operation copies every row from every input into the output.
 
-For example, given the following input:
-    1 2 3
-    4 5 6
-And the following input:
-     7  8  9
-    10 11 12
-    13 14 15
-The APPEND operation will give the follwing output:
-     1  2  3
-     4  5  6
-     7  8  9
-    10 11 12
-    13 14 15
+For example, given the following input:<br/>
+    1 2 3<br/>
+    4 5 6<br/>
+And the following input:<br/>
+     7  8  9<br/>
+    10 11 12<br/>
+    13 14 15<br/>
+The APPEND operation will give the follwing output:<br/>
+     1  2  3<br/>
+     4  5  6<br/>
+     7  8  9<br/>
+    10 11 12<br/>
+    13 14 15<br/>
 
 ### COMBINE
 
@@ -108,15 +108,15 @@ This operation is only supported if all data sources have the same number of row
 
 This operation works row-wise among the input sources, and concatenates every corresponding rows.
 
-For example, given the following input:
-    1 2 3
-    4 5 6
-And the following input:
-    7  8
-    9 10
-The COMBINE operation will produce the following output:
-    1 2 3 7  8
-    4 5 6 9 10
+For example, given the following input:<br/>
+    1 2 3<br/>
+    4 5 6<br/>
+And the following input:<br/>
+    7  8<br/>
+    9 10<br/>
+The COMBINE operation will produce the following output:<br/>
+    1 2 3 7  8<br/>
+    4 5 6 9 10<br/>
 
 ### SUM
 
@@ -125,12 +125,12 @@ rows and the same number of columns
 
 This operation sums the numbers that are at the same place in the grid.
 
-For example, given the following input:
-    1 2 3
-    4 5 6
-And the following input:
-     7  8  9
-    10 11 12
-The SUM operation will give the follwing output:
-     8 10 12
-    14 16 18
+For example, given the following input:<br/>
+    1 2 3<br/>
+    4 5 6<br/>
+And the following input:<br/>
+     7  8  9<br/>
+    10 11 12<br/>
+The SUM operation will give the follwing output:<br/>
+     8 10 12<br/>
+    14 16 18<br/>
